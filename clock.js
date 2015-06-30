@@ -1,3 +1,8 @@
+document.addEventListener('DOMContentLoaded', function () {
+	// ropa på setInterval() här
+	setInterval(updateClock, 200);
+	setInterval(changeColor,1000);
+});
 function updateClock() {
 	var now = new Date();
 
@@ -18,4 +23,16 @@ function updateClock() {
 	var elem = document.getElementById("clock");
 
 	elem.innerHTML = hours + ":" + minutes + ":" + seconds;
+}
+
+function changeColor() {
+	var colors = [105, 0, 200];
+	var second = new Date().getSeconds();
+
+	var color = parseInt((255%60)*second);
+	colors[1] = color;
+
+	var elem = document.getElementById("color");
+
+	elem.style.backgroundColor = "rgb(" + colors[0] + "," + colors[1] + "," + colors[2] + ")";
 }
