@@ -29,7 +29,7 @@ function changeColor() {
 	var colors = [105, 0, 200];
 	var second = new Date().getSeconds();
 
-	var color = parseInt((255%60)*second);
+	var color = parseInt((255/60)*second);
 	colors[1] = color;
 
 	var elem = document.getElementById("color");
