@@ -25,14 +25,47 @@ function updateClock() {
 	elem.innerHTML = hours + ":" + minutes + ":" + seconds;
 }
 
+//function changeColor() {
+//	var colors = [105, 0, 200];
+//	var second = new Date().getSeconds();
+
+//	var color = parseInt((255/60)*second);
+//	colors[1] = color;
+
+//	var elem = document.getElementById("color");
+
+//	elem.style.backgroundColor = "rgb(" + colors[0] + "," + colors[1] + "," + colors[2] + ")";
+//}
+
 function changeColor() {
-	var colors = [105, 0, 200];
-	var second = new Date().getSeconds();
+	var hour = new Date().getHours();
 
-	var color = parseInt((255/60)*second);
-	colors[1] = color;
+	while(hour >= 0 && hour <= 11){
+		var r = 44;
+		var g = 122;
+		var b = 140;
 
-	var elem = document.getElementById("color");
+		var newr = r + 5 * hour;
+		var newg = g + 5 * hour;
+		var newb = b + 5 * hour;
+		var color = [newr, newg, newb];
 
-	elem.style.backgroundColor = "rgb(" + colors[0] + "," + colors[1] + "," + colors[2] + ")";
+		var elem = document.getElementById("color");
+		elem.style.backgroundColor = "rgb(" + color[0] + "," + color[1] + "," + color[2] + ")";
+
+	}
+
+	while(hour >= 12 && hour <= 23){
+		r = 159;
+		g = 237;
+		b = 255;
+
+		newr = r - 5 * hour;
+		newg = g - 5 * hour;
+		newb = b - 5 * hour;
+
+		elem.style.backgroundColor = "rgb(" + color[0] + "," + color[1] + "," + color[2] + ")";
+
+
+	}
 }
