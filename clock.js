@@ -40,7 +40,7 @@ function updateClock() {
 function changeColor() {
 	var hour = new Date().getHours();
 
-	while(hour >= 0 && hour <= 11){
+	if(hour >= 0 && hour <= 11){
 		var r = 44;
 		var g = 122;
 		var b = 140;
@@ -55,7 +55,7 @@ function changeColor() {
 
 	}
 
-	while(hour >= 12 && hour <= 23){
+	if(hour >= 12 && hour <= 23){
 		var r = 159;
 		var g = 237;
 		var b = 255;
