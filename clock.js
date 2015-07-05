@@ -56,14 +56,16 @@ function changeColor() {
 	}
 
 	while(hour >= 12 && hour <= 23){
-		r = 159;
-		g = 237;
-		b = 255;
+		var r = 159;
+		var g = 237;
+		var b = 255;
 
-		newr = r - 5 * hour;
-		newg = g - 5 * hour;
-		newb = b - 5 * hour;
+		var newr = r - 5 * hour;
+		var newg = g - 5 * hour;
+		var newb = b - 5 * hour;
+		var color = [newr, newg, newb];
 
+		var elem = document.getElementById("color");
 		elem.style.backgroundColor = "rgb(" + color[0] + "," + color[1] + "," + color[2] + ")";
 
 
