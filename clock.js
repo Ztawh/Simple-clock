@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', function () {
-	// ropa på setInterval() här
 	setInterval(updateClock, 200);
 	setInterval(changeColor,1000);
 });
@@ -25,18 +24,6 @@ function updateClock() {
 	elem.innerHTML = hours + ":" + minutes + ":" + seconds;
 }
 
-//function changeColor() {
-//	var colors = [105, 0, 200];
-//	var second = new Date().getSeconds();
-
-//	var color = parseInt((255/60)*second);
-//	colors[1] = color;
-
-//	var elem = document.getElementById("color");
-
-//	elem.style.backgroundColor = "rgb(" + colors[0] + "," + colors[1] + "," + colors[2] + ")";
-//}
-
 function changeColor() {
 	var hour = new Date().getHours();
 
@@ -52,7 +39,6 @@ function changeColor() {
 
 		var elem = document.getElementById("color");
 		elem.style.backgroundColor = "rgb(" + color[0] + "," + color[1] + "," + color[2] + ")";
-
 	}
 
 	if(hour >= 12 && hour <= 23){
@@ -67,7 +53,5 @@ function changeColor() {
 
 		var elem = document.getElementById("color");
 		elem.style.backgroundColor = "rgb(" + color[0] + "," + color[1] + "," + color[2] + ")";
-
-
 	}
 }

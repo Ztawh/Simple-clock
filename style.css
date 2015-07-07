@@ -1,14 +1,35 @@
+html, body{
+	height: 100%;
+}
 #color {
-	height: 800px;
+	height: 100%;
+	position: relative;
 }
+
 #clock {
-	text-align: center;
-	padding-top: 300px;
 	color: white;
+	font-family: courier, georgia;
+
 	font-size: 350%;
+	padding: 20px;
+
+	position: absolute;
+	top: 50%;
+	left: 50%;
+
+	margin: -70px 0 0 -170px;
 }
-/*#circle {
-	text-align: center;
-	font-size: 200%;
-	color: black;
+/*#symbol {
+	font-size: 3000%;
+	z-index: 1;
+	color: white;
+	padding: 20px;
+	position: absolute;
+	
+	left: 50%;
+	top: 50%;
+	
+	
+	margin: -50px 0 0 -50px;
+
 }*/
