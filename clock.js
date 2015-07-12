@@ -19,7 +19,7 @@ function updateClock() {
 		seconds = "0" + seconds;
 	}
 
-	var elem = document.getElementById("clock");
+	var elem = document.getElementById("time");
 
 	elem.innerHTML = hours + ":" + minutes + ":" + seconds;
 }
@@ -53,5 +53,8 @@ function changeColor() {
 
 		var elem = document.getElementById("color");
 		elem.style.backgroundColor = "rgb(" + color[0] + "," + color[1] + "," + color[2] + ")";
+
+		var element = document.getElementById("time");
+		element.style.color = "rgb(" + color[0] + "," + color[1] + "," + color[2] + ")";
 	}
 }

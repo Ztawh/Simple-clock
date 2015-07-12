@@ -5,31 +5,24 @@ html, body{
 	height: 100%;
 	position: relative;
 }
-
 #clock {
-	color: white;
-	font-family: courier, georgia;
+	background-color: white;
+	border-radius: 50%;
 
-	font-size: 350%;
+	height: 300px;
+	width: 300px;
 	padding: 20px;
 
 	position: absolute;
 	top: 50%;
 	left: 50%;
 
-	margin: -70px 0 0 -170px;
+	margin: -170px 0 0 -170px;
 }
-/*#symbol {
-	font-size: 3000%;
-	z-index: 1;
-	color: white;
-	padding: 20px;
-	position: absolute;
-	
-	left: 50%;
-	top: 50%;
-	
-	
-	margin: -50px 0 0 -50px;
-
-}*/
+span#time {
+	font-family: courier, georgia;
+	display: block;
+	font-size: 350%;
+	line-height: 300px;
+	text-align: center;
+}
